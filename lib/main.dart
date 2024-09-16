@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:video/video_screen.dart';
+import 'package:video/welcome_screen.dart';
 
 void main(){
   runApp(
     const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home : VideoScreen()
+      home : WelcomeScreen()
     )
   );
 }
