@@ -22,7 +22,7 @@ class _VideoScreenState extends State<VideoScreen> {
       autoInitialize: true,
       videoPlayerController: VideoPlayerController.networkUrl(
         Uri.parse("https://kinescope.io/tYCoZQy3d8KrHdK6zufQ4f/master.m3u8"),
-        httpHeaders: {'Referer': " https://test.student.najotedu.uz"},
+        httpHeaders: {'Referer': "https://test.student.najotedu.uz"},
       ),
     );
   }
@@ -44,28 +44,21 @@ class _VideoScreenState extends State<VideoScreen> {
         ),
         child: Column(
           children: [
-            const SizedBox(height: 100,),
+            const SizedBox(height: 100),
             Container(
-              width: double.infinity,
-              color : Colors.black,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    height: 300,
-                    width: 300,
-                    child: ClipRect(
-                      child: FlickVideoPlayer(
-                        flickManager: flickManager,
-                        flickVideoWithControls: const FlickVideoWithControls(
-                          controls: CustomOrientationControls(),
-                        ),
-                      ),
-                    ),
+              height: 300,
+              color: Colors.black,
+              child: ClipRect(
+                child: FlickVideoPlayer(
+                  flickManager: flickManager,
+                  flickVideoWithControls: const FlickVideoWithControls(
+                    videoFit: BoxFit.contain,
+                    controls: CustomOrientationControls(),
                   ),
-                ],
+                ),
               ),
             ),
+
           ],
         ),
       ),

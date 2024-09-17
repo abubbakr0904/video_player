@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:flick_video_player/flick_video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -158,6 +157,7 @@ class _CustomOrientationControlsState extends State<CustomOrientationControls> {
                         ),
                         FlickFullScreenToggle(
                           size: widget.iconSize,
+                          color : Colors.green
                         ),
                       ],
                     ),
